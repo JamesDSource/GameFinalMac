@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Orb.cs" type="Script" id=1]
 [ext_resource path="res://Assets/playerCharacter/Orb/OrbFloating/Orb_floating_right1.png" type="Texture" id=2]
@@ -24,6 +24,7 @@
 [ext_resource path="res://Assets/playerCharacter/Orb/Orb_floating_left/Orb_floating_left10.png" type="Texture" id=22]
 [ext_resource path="res://Assets/playerCharacter/Orb/Orb_floating_left/Orb_floating_left11.png" type="Texture" id=23]
 [ext_resource path="res://Assets/playerCharacter/staff.png" type="Texture" id=24]
+[ext_resource path="res://icon.png" type="Texture" id=25]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -41,6 +42,9 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 8.01308, 8.05587 )
 
+[sub_resource type="CircleShape2D" id=3]
+radius = 86.8729
+
 [node name="Orb" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
@@ -55,3 +59,20 @@ texture = ExtResource( 24 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 3.33329, 3.33328 )
 shape = SubResource( 2 )
+
+[node name="Detection" type="Area2D" parent="."]
+position = Vector2( 3.33832, 3.33832 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection"]
+shape = SubResource( 3 )
+
+[node name="PickUp" type="Sprite" parent="."]
+position = Vector2( 43.4708, -32.6441 )
+scale = Vector2( 0.318206, 0.307954 )
+texture = ExtResource( 25 )
+
+[connection signal="body_entered" from="Detection" to="." method="_on_Detection_body_entered"]
+[connection signal="body_exited" from="Detection" to="." method="_on_Detection_body_exited"]

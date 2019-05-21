@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Jail_cell.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Object Assets/chain.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Orb.tscn" type="PackedScene" id=5]
 
 [node name="Enter" type="Node2D"]
 
@@ -23,4 +24,8 @@ texture = ExtResource( 3 )
 flip_v = true
 
 [node name="player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 134.734, 611.83 )
+position = Vector2( 127.583, 611.051 )
+
+[node name="Orb" parent="." instance=ExtResource( 5 )]
+position = Vector2( 897.037, 1053.44 )
+

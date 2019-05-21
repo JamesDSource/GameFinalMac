@@ -76,4 +76,5 @@ animation = "left_idle"
 
 [node name="hitbox" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
+
 [connection signal="animation_finished" from="playerSprite" to="." method="_on_playerSprite_animation_finished"]
