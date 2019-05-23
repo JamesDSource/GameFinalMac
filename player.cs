@@ -37,7 +37,8 @@ public class Attack
 
 
 public class player : KinematicBody2D
-{	// Variables go here
+{	[Signal]
+	delegate void is_picking_up();
 	//vector
 	private Vector2 velocity = new Vector2();
 	//ints
@@ -50,6 +51,7 @@ public class player : KinematicBody2D
 	private bool is_moving_sideways = false;
 	private bool left = false;
 	private bool airborn = false; 
+	private bool orb_move = true; 
 	
 	
 	
@@ -100,12 +102,36 @@ public class player : KinematicBody2D
 		else if(!is_moving_sideways && !left)
 			{playAnimation("right_idle");}
 	}
+	
+	
+	//getters
+	public bool get_can_move()
+		{return can_move;}
+	public bool get_orb_move()
+		{return orb_move;}
+	
+	
 	public void playAnimation(string animation)
 	{GetNode<AnimatedSprite>("playerSprite").Play(animation);}
-private void _on_playerSprite_animation_finished()
-{
-    if(GetNode<AnimatedSprite>("playerSprite").GetAnimation().Equals("left_jump") || GetNode<AnimatedSprite>("playerSprite").GetAnimation().Equals("right_jump"))
-	{airborn = false;
-	can_move = true;}
-}
+	private void _on_playerSprite_animation_finished()
+	{
+	    if(GetNode<AnimatedSprite>("playerSprite").GetAnimation().Equals("left_jump") || GetNode<AnimatedSprite>("playerSprite").GetAnimation().Equals("right_jump"))
+		{airborn = false;
+		can_move = true;}
+	}
+	private void _on_Orb_can_pick_up()
+	{
+	    if(Input.IsActionPressed("ui_interact"))
+		{EmitSignal(nameof(is_picking_up));}
+	}
+	private void _on_OrbArea_body_entered(object body)
+	{
+	    if(body.ToString() == "Orb")
+		{orb_move = false;}
+	}
+	private void _on_OrbArea_body_exited(object body)
+	{
+    	if(body.ToString() == "Orb")
+		{orb_move = true;}
+	}
 }

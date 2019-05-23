@@ -29,3 +29,5 @@ position = Vector2( 127.583, 611.051 )
 [node name="Orb" parent="." instance=ExtResource( 5 )]
 position = Vector2( 897.037, 1053.44 )
 
+[connection signal="is_picking_up" from="player" to="Orb" method="_on_player_is_picking_up"]
+[connection signal="can_pick_up" from="Orb" to="player" method="_on_Orb_can_pick_up"]
