@@ -1,0 +1,211 @@
+[gd_scene load_steps=107 format=2]
+
+[ext_resource path="res://Scenes/Warden.cs" type="Script" id=1]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_walk_left/warren_walk_left1.png" type="Texture" id=2]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_walk_left/warren_walk_left2.png" type="Texture" id=3]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_walk_left/warren_walk_left3.png" type="Texture" id=4]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_walk_left/warren_walk_left4.png" type="Texture" id=5]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_walk_left/warren_walk_left5.png" type="Texture" id=6]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_walk_left/warren_walk_left6.png" type="Texture" id=7]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_right/warren_hit_right1.png" type="Texture" id=8]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_right/warren_hit_right2.png" type="Texture" id=9]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_right/warren_hit_right3.png" type="Texture" id=10]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_right/warren_hit_right4.png" type="Texture" id=11]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_right/warren_hit_right5.png" type="Texture" id=12]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_right/warren_hit_right6.png" type="Texture" id=13]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_right/warren_hit_right7.png" type="Texture" id=14]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_right/warren_hit_right8.png" type="Texture" id=15]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_right/warren_hit_right9.png" type="Texture" id=16]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_right/warren_hit_right10.png" type="Texture" id=17]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_right/warren_hit_right11.png" type="Texture" id=18]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_right/warren_hit_right12.png" type="Texture" id=19]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_right/warren_hit_right13.png" type="Texture" id=20]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_right/warren_hit_right14.png" type="Texture" id=21]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_right/warren_hit_right15.png" type="Texture" id=22]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_right/warren_hit_right16.png" type="Texture" id=23]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_right/warren_hit_right17.png" type="Texture" id=24]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_right/warren_hit_right18.png" type="Texture" id=25]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_right/warren_hit_right19.png" type="Texture" id=26]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_walk_right/warren_walk_right1.png" type="Texture" id=27]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_left/warren_hit_left1.png" type="Texture" id=28]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_left/warren_hit_left2.png" type="Texture" id=29]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_left/warren_hit_left3.png" type="Texture" id=30]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_left/warren_hit_left4.png" type="Texture" id=31]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_left/warren_hit_left5.png" type="Texture" id=32]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_left/warren_hit_left6.png" type="Texture" id=33]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_left/warren_hit_left7.png" type="Texture" id=34]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_left/warren_hit_left8.png" type="Texture" id=35]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_left/warren_hit_left9.png" type="Texture" id=36]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_left/warren_hit_left10.png" type="Texture" id=37]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_left/warren_hit_left11.png" type="Texture" id=38]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_left/warren_hit_left12.png" type="Texture" id=39]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_left/warren_hit_left13.png" type="Texture" id=40]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_left/warren_hit_left14.png" type="Texture" id=41]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_left/warren_hit_left15.png" type="Texture" id=42]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_left/warren_hit_left16.png" type="Texture" id=43]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_left/warren_hit_left17.png" type="Texture" id=44]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_left/warren_hit_left18.png" type="Texture" id=45]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_hit_left/warren_hit_left19.png" type="Texture" id=46]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_walk_right/warren_walk_right2.png" type="Texture" id=47]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_walk_right/warren_walk_right3.png" type="Texture" id=48]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_walk_right/warren_walk_right4.png" type="Texture" id=49]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_walk_right/warren_walk_right5.png" type="Texture" id=50]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_walk_right/warren_walk_right6.png" type="Texture" id=51]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_left/warren_bat_left1.png" type="Texture" id=52]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_left/warren_bat_left2.png" type="Texture" id=53]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_left/warren_bat_left3.png" type="Texture" id=54]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_left/warren_bat_left4.png" type="Texture" id=55]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_left/warren_bat_left5.png" type="Texture" id=56]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_left/warren_bat_left6.png" type="Texture" id=57]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_left/warren_bat_left7.png" type="Texture" id=58]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_left/warren_bat_left8.png" type="Texture" id=59]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_left/warren_bat_left9.png" type="Texture" id=60]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_left/warren_bat_left10.png" type="Texture" id=61]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_left/warren_bat_left11.png" type="Texture" id=62]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_left/warren_bat_left12.png" type="Texture" id=63]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_left/warren_bat_left13.png" type="Texture" id=64]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_left/warren_bat_left14.png" type="Texture" id=65]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_left/warren_bat_left15.png" type="Texture" id=66]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_left/warren_bat_left16.png" type="Texture" id=67]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_left/warren_bat_left17.png" type="Texture" id=68]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_left/warren_bat_left18.png" type="Texture" id=69]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_left/warren_bat_left19.png" type="Texture" id=70]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_left/warren_bat_left20.png" type="Texture" id=71]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_left/warren_bat_left21.png" type="Texture" id=72]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_left/warren_bat_left22.png" type="Texture" id=73]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_left/warren_bat_left23.png" type="Texture" id=74]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_left/warren_bat_left24.png" type="Texture" id=75]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_left/warren_bat_left25.png" type="Texture" id=76]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_right/warren_bat_right1.png" type="Texture" id=77]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_right/warren_bat_right2.png" type="Texture" id=78]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_right/warren_bat_right3.png" type="Texture" id=79]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_right/warren_bat_right4.png" type="Texture" id=80]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_right/warren_bat_right5.png" type="Texture" id=81]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_right/warren_bat_right6.png" type="Texture" id=82]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_right/warren_bat_right7.png" type="Texture" id=83]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_right/warren_bat_right8.png" type="Texture" id=84]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_right/warren_bat_right9.png" type="Texture" id=85]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_right/warren_bat_right10.png" type="Texture" id=86]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_right/warren_bat_right11.png" type="Texture" id=87]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_right/warren_bat_right12.png" type="Texture" id=88]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_right/warren_bat_right13.png" type="Texture" id=89]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_right/warren_bat_right14.png" type="Texture" id=90]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_right/warren_bat_right15.png" type="Texture" id=91]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_right/warren_bat_right16.png" type="Texture" id=92]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_right/warren_bat_right17.png" type="Texture" id=93]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_right/warren_bat_right18.png" type="Texture" id=94]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_right/warren_bat_right19.png" type="Texture" id=95]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_right/warren_bat_right20.png" type="Texture" id=96]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_right/warren_bat_right21.png" type="Texture" id=97]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_right/warren_bat_right22.png" type="Texture" id=98]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_right/warren_bat_right23.png" type="Texture" id=99]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_right/warren_bat_right24.png" type="Texture" id=100]
+[ext_resource path="res://Assets/enemies/The Warden Animations/warden_bat_right/warren_bat_right25.png" type="Texture" id=101]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "idle_left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "walk_left",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ) ],
+"loop": true,
+"name": "swing_right",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 27 ) ],
+"loop": true,
+"name": "idle_right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ) ],
+"loop": true,
+"name": "swing_left",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 27 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ) ],
+"loop": true,
+"name": "walk_right",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ) ],
+"loop": true,
+"name": "hit_left",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ), ExtResource( 101 ) ],
+"loop": true,
+"name": "hit_right",
+"speed": 20.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 36.3843
+height = 56.1687
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 603.422
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 308.012
+
+[sub_resource type="CapsuleShape2D" id=5]
+radius = 65.4963
+height = 39.5569
+
+[node name="Warden" type="KinematicBody2D"]
+position = Vector2( -35.2456, -43.3386 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="jane" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "idle_left"
+playing = true
+
+[node name="hitbox" type="CollisionShape2D" parent="."]
+position = Vector2( 25.5244, 21.1538 )
+shape = SubResource( 2 )
+
+[node name="Detection" type="Area2D" parent="."]
+position = Vector2( 17.3713, 182.048 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection"]
+position = Vector2( 26.1805, 21.0471 )
+shape = SubResource( 3 )
+
+[node name="Closeness" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Closeness"]
+position = Vector2( 24.5547, 158.13 )
+shape = SubResource( 4 )
+
+[node name="Melee_Range" type="Area2D" parent="."]
+position = Vector2( 25.5199, 23.0234 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Melee_Range"]
+rotation = 1.56342
+shape = SubResource( 5 )
+
+[node name="Melee_Timer" type="Timer" parent="."]
+
+[node name="pointer" type="Sprite" parent="."]
+position = Vector2( -32.7608, 0.677811 )
+
+[node name="Aim" type="Position2D" parent="pointer"]
+position = Vector2( -1.52588e-05, 0 )
+
+[connection signal="body_entered" from="Detection" to="." method="_on_Detection_body_entered"]
+[connection signal="body_entered" from="Closeness" to="." method="_on_Closeness_body_entered"]
+[connection signal="body_exited" from="Closeness" to="." method="_on_Closeness_body_exited"]
+[connection signal="body_entered" from="Melee_Range" to="." method="_on_Melee_Range_body_entered"]
+[connection signal="body_exited" from="Melee_Range" to="." method="_on_Melee_Range_body_exited"]
+[connection signal="timeout" from="Melee_Timer" to="." method="_on_Melee_Timer_timeout"]

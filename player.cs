@@ -1,62 +1,34 @@
 using Godot;
 using System;
-
-
-public class Attack
-{
-	//vars
-	private int damage;
-	private float cooldown;
-	private string animation; 
-	//constructer
-	public Attack(int damage, float cooldown, string animation)
-	{
-		this.cooldown = cooldown;
-		this.damage = damage;
-		this.animation = animation; 
-	}
-	
-	//getters
-	public float getCooldown()
-	{return cooldown;}
-	public int getDamage()
-	{return damage;}
-	public string getAnimation()
-	{return animation;}
-	
-	//setters
-	public void setCooldown(float cooldown)
-	{this.cooldown = cooldown;}
-	public void setDamage(int damage)
-	{this.damage = damage;}
-	public void setAnimation(string animation)
-	{this.animation = animation;}
-	
-}
-
-
-
 public class player : KinematicBody2D
-{	[Signal]
+{
+	[Signal]
 	delegate void is_picking_up();
 	//vector
-	private Vector2 velocity = new Vector2();
+	public Vector2 velocity = new Vector2();
 	//ints
 	private int health = 100;
 	private int movement_speed = 500;
-	private int jump_speed = 1500; 
+	private int jump_speed = 900; 
 	private int gravity = 50;
+	private int max_speed = 900;
+	private int base_speed = 500;
+	private int speed_increase = 50; 
 	//bools
+	private bool can_shoot = true;
 	private bool can_move = true;
 	private bool is_moving_sideways = false;
 	private bool left = false;
 	private bool airborn = false; 
 	private bool orb_move = true; 
-	
+	//float
+	private float speed_buidup_time = 1;
 	
 	
 	public override void _Ready()
     {
+		GetNode<Timer>("Speed").SetWaitTime(speed_buidup_time);
+		GetNode<Timer>("Speed").Start();
     }
 	public override void _PhysicsProcess(float delta)
 	{		
@@ -64,10 +36,10 @@ public class player : KinematicBody2D
 		if(can_move)
 		{
 			velocity.y += gravity; 
-			if(Input.IsActionPressed("ui_move_right"))
+			if(Input.IsActionPressed("ui_walk_right"))
 			{velocity.x = movement_speed;
 			left = false;}
-			else if(Input.IsActionPressed("ui_move_left"))
+			else if(Input.IsActionPressed("ui_walk_left"))
 			{velocity.x = -movement_speed;
 			left = true;}
 			else
@@ -101,6 +73,12 @@ public class player : KinematicBody2D
 			{playAnimation("left_idle");}
 		else if(!is_moving_sideways && !left)
 			{playAnimation("right_idle");}
+			
+			
+		if(health <= 0)
+			{Hide();}
+		
+
 	}
 	
 	
@@ -109,7 +87,11 @@ public class player : KinematicBody2D
 		{return can_move;}
 	public bool get_orb_move()
 		{return orb_move;}
+	public int get_movement_speed()
+		{return movement_speed;}
 	
+	public void damage_taken(int damage)
+	{health = health - damage;}
 	
 	public void playAnimation(string animation)
 	{GetNode<AnimatedSprite>("playerSprite").Play(animation);}
@@ -126,12 +108,22 @@ public class player : KinematicBody2D
 	}
 	private void _on_OrbArea_body_entered(object body)
 	{
-	    if(body.ToString() == "Orb")
-		{orb_move = false;}
+		if(body.ToString() == "Orb")
+		{orb_move = false;
+		AddCollisionExceptionWith((Node)body);}
 	}
 	private void _on_OrbArea_body_exited(object body)
 	{
     	if(body.ToString() == "Orb")
 		{orb_move = true;}
+	}
+	private void _on_Speed_timeout()
+	{
+	    if(velocity.x > 0 && velocity.x < max_speed)
+		{movement_speed = movement_speed + speed_increase;}
+		else if(velocity.x < 0 && velocity.x > -max_speed)
+		{movement_speed = movement_speed + speed_increase;}
+		else if(velocity.x == 0)
+		{movement_speed= base_speed;}
 	}
 }
